@@ -23,7 +23,7 @@ void loop() {
   pinMode(echoPin, INPUT);
   duration = pulseIn(echoPin, HIGH);
   cm = (duration/2) / 29.1;
-  if(cm<5){
+  if(cm<5){               //if the pedestrian is 5cm or near to the sensor, the pedestrian green light and the car red light will go on.
     delay(500); 
     digitalWrite(cr, HIGH);  
     digitalWrite(cg, LOW); 
